@@ -29,7 +29,7 @@ export function ContactSection() {
           subtitleClassName="mb-16 text-lg font-medium"
         />
         {/* lg: flex row so the logo column fits its content and the cards share the rest. */}
-        <div className="grid gap-10 md:grid-cols-1 lg:flex lg:gap-0">
+        <div className="grid gap-10 md:grid-cols-1 lg:flex lg:gap-4">
           {card(phone, 0.1)}
           <Reveal
             delay={0.2}
