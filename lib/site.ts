@@ -19,7 +19,7 @@ export const site = {
   name: "HRV Mobile Trade",
   title: "HRV Mobile Trade - Prémium Megoldások",
   description:
-    "Az HRV Mobile Trade Kft. megbízható és korszerű megoldásokat kínál a mindennapi élethez. Prémium laptopok, mobiltelefonok és háztartási gépek forgalmazása.",
+    "Az HRV Mobile Trade Kft megbízható és korszerű megoldásokat kínál a mindennapi élethez. Prémium laptopok, mobiltelefonok és háztartási gépek forgalmazása.",
   ogDescription:
     "Megbízható és korszerű megoldások a mindennapi élethez. Prémium laptopok, mobilok és háztartási gépek.",
   phone: { display: "06 20 427 8496", href: "tel:+36204278496" },
