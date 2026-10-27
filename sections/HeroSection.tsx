@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder";
+import Image from "next/image";
 import { Reveal } from "@/components/shared/Reveal";
 
 export function HeroSection() {
@@ -41,10 +41,16 @@ export function HeroSection() {
           </a>
         </div>
         <div className="group relative max-[1024px]:order-1 max-[1024px]:mb-10">
-          {/* Original photo is 1000×667, shown at 100% column width. */}
-          <ImagePlaceholder
-            aspectRatio="1000 / 667"
-            className="w-full rounded-[32px] shadow-[0_30px_60px_rgba(0,0,0,0.1)] transition-transform duration-400 ease-out-expo [transform:perspective(1000px)_rotateY(-5deg)] group-hover:[transform:perspective(1000px)_rotateY(0deg)]"
+          {/* Above the fold (LCP candidate): load eagerly with high priority. */}
+          <Image
+            src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1000&q=80"
+            alt="Laptop, fejhallgató, okostelefon és okosóra egy asztalon"
+            width={1000}
+            height={667}
+            sizes="(max-width: 1024px) 88vw, 620px"
+            loading="eager"
+            fetchPriority="high"
+            className="h-auto w-full rounded-[32px] shadow-[0_30px_60px_rgba(0,0,0,0.1)] transition-transform duration-400 ease-out-expo [transform:perspective(1000px)_rotateY(-5deg)] group-hover:[transform:perspective(1000px)_rotateY(0deg)]"
           />
           <div className="absolute bottom-10 -left-[30px] flex flex-col items-center rounded-[20px] border border-white bg-white/90 px-[30px] py-5 shadow-[0_20px_40px_rgba(0,0,0,0.1)] backdrop-blur-[10px] max-[1024px]:bottom-5 max-[1024px]:left-5">
             <strong className="font-heading text-2xl leading-none font-extrabold text-[#0a0a0b]">

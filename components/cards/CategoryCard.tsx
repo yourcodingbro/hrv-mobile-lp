@@ -1,16 +1,26 @@
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
-import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 
 type CategoryCardProps = {
   category: string
   title: string
   shortDesc: string
+  /** Decorative background photo (the h2 already names the category). */
+  imageSrc: string
+  imageSizes?: string
   className?: string
 }
 
-export function CategoryCard({ category, title, shortDesc, className }: CategoryCardProps) {
+export function CategoryCard({
+  category,
+  title,
+  shortDesc,
+  imageSrc,
+  imageSizes = "(max-width: 1024px) 88vw, 600px",
+  className,
+}: CategoryCardProps) {
   return (
     <Card
       className={cn(
@@ -18,7 +28,7 @@ export function CategoryCard({ category, title, shortDesc, className }: Category
         className,
       )}
     >
-      <ImagePlaceholder className="absolute inset-0 size-full" />
+      <Image src={imageSrc} alt="" fill sizes={imageSizes} className="object-cover object-center" />
       <div className="relative z-[2] bg-linear-to-t from-category from-0% via-category/20 via-70% to-transparent p-10">
         <Badge className="mb-4 h-auto rounded-full border-0 bg-white/20 px-3.5 py-1.5 text-[11px] font-extrabold tracking-[1px] text-white uppercase backdrop-blur-[10px]">
           {category}

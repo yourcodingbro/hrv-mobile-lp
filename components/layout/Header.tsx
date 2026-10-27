@@ -1,5 +1,5 @@
-import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder"
 import { MobileMenu } from "@/components/layout/MobileMenu"
+import { Logo } from "@/components/shared/Logo"
 import { navItems } from "@/data/navigation"
 import { site } from "@/lib/site"
 
@@ -9,7 +9,8 @@ export function Header() {
   return (
     <header className="fixed top-6 left-1/2 z-[1000] flex w-[92%] max-w-[1200px] -translate-x-1/2 items-center justify-between rounded-full border border-white/80 bg-nav px-6 py-2.5 shadow-[0_4px_20px_rgba(0,0,0,0.04)] backdrop-blur-[24px]">
       <a href="#" className={`relative z-[1001] flex items-center ${focusRing}`}>
-        <ImagePlaceholder className="size-10 rounded-full border border-line" />
+        {/* Decorative: the brand name sits right next to it. */}
+        <Logo alt="" className="border border-line" />
         <span className="ml-3 font-heading text-lg font-extrabold text-ink">{site.name}</span>
       </a>
       <nav aria-label="Fő navigáció" className="max-[800px]:hidden">

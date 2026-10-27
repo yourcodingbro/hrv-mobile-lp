@@ -1,5 +1,5 @@
 import { ContactCard } from "@/components/cards/ContactCard"
-import { ImagePlaceholder } from "@/components/shared/ImagePlaceholder"
+import { Logo } from "@/components/shared/Logo"
 import { Reveal } from "@/components/shared/Reveal"
 import { SectionHeader } from "@/components/shared/SectionHeader"
 import { contacts } from "@/data/contacts"
@@ -24,7 +24,7 @@ export function ContactSection() {
         <div className="flex flex-wrap items-center justify-center gap-10 max-[800px]:flex-col">
           {card(phone, 0.1)}
           <Reveal delay={0.2} className="flex items-center justify-center max-[800px]:order-first max-[800px]:mb-5">
-            <ImagePlaceholder className="size-[180px] rounded-full border border-line shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-transform duration-400 hover:scale-105" />
+            <Logo className="size-[180px] border border-line shadow-[0_20px_40px_rgba(0,0,0,0.08)] transition-transform duration-400 hover:scale-105" />
           </Reveal>
           {card(email, 0.3)}
         </div>

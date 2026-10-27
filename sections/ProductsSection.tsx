@@ -21,7 +21,7 @@ export function ProductsSection() {
           // The original's tilt transform overrides its reveal translate, so cards only fade in.
           <Reveal key={card.title} y={0} delay={(i + 1) * 0.1} className={cn(wide && "col-span-2 max-[1024px]:col-span-1")}>
             <Tilt className={cn("grid h-full rounded-[32px]", wide ? "min-h-[500px]" : "min-h-[420px]")}>
-              <CategoryCard {...card} />
+              <CategoryCard {...card} imageSizes={wide ? "(max-width: 1024px) 88vw, 1200px" : undefined} />
             </Tilt>
           </Reveal>
         ))}
