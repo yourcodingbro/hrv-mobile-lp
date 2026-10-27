@@ -22,6 +22,9 @@ export const site = {
     "Az HRV Mobile Trade Kft megbízható és korszerű megoldásokat kínál a mindennapi élethez. Prémium laptopok, mobiltelefonok és háztartási gépek forgalmazása.",
   ogDescription:
     "Megbízható és korszerű megoldások a mindennapi élethez. Prémium laptopok, mobilok és háztartási gépek.",
-  phone: { display: "06 20 427 8496", href: "tel:+36204278496" },
-  email: { display: "info@etinvest.hu", href: "mailto:info@etinvest.hu" },
+  phone: { display: "06 20 426 6779", href: "tel:+36204266779" },
+  email: {
+    display: "horvathphonekft@gmail.com",
+    href: "mailto:horvathphonekft@gmail.com",
+  },
 };
