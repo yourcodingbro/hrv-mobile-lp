@@ -19,7 +19,7 @@ export function ContactCard({
   return (
     <Card
       className={cn(
-        "group relative items-center gap-0 rounded-tile border border-line bg-page p-10 text-base text-ink ring-0 transition-all duration-300 ease-out-expo hover:-translate-y-1.5 hover:border-black/15 hover:bg-surface-hover hover:shadow-xl has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-ring dark:bg-graphite/80 dark:hover:border-white/20",
+        "group relative h-full min-h-56 items-center justify-center gap-0 rounded-tile border border-line bg-page px-6 py-10 sm:px-8 text-base text-ink ring-0 transition-all duration-300 ease-out-expo hover:-translate-y-1.5 hover:border-black/15 hover:bg-surface-hover hover:shadow-xl has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-ring dark:bg-graphite/80 dark:hover:border-white/20",
         className
       )}
     >
@@ -29,7 +29,7 @@ export function ContactCard({
       <h3 className="mb-3 text-label font-extrabold tracking-widest text-ink-muted uppercase dark:text-ink">
         {title}
       </h3>
-      <p className="font-heading text-2xl font-extrabold text-ink transition-colors duration-300 group-hover:text-ink-muted [&_a]:outline-none [&_a]:after:absolute [&_a]:after:inset-0">
+      <p className="max-w-full min-w-0 font-heading text-2xl font-extrabold wrap-anywhere text-ink truncate transition-colors duration-300 group-hover:text-ink-muted [&_a]:outline-none [&_a]:after:absolute [&_a]:after:inset-0">
         {content}
       </p>
     </Card>
