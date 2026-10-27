@@ -44,7 +44,7 @@ export function Tilt({ children, className }: { children: ReactNode; className?:
       {children}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-10 rounded-[inherit]"
+        className="pointer-events-none absolute inset-0 z-30 rounded-card"
         style={{ backgroundImage: glare, opacity: glareOpacity }}
       />
     </motion.div>

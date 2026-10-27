@@ -5,6 +5,23 @@
 /* The original follows the OS theme, so `dark:` is media-based. */
 @custom-variant dark (@media (prefers-color-scheme: dark));
 
+/* Shared brand design tokens (from the reference site); one-off values use standard utilities. */
+@theme {
+  --color-graphite: #191c23;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --spacing-gutter: 5%;
+  --container-content: 75rem;
+  --breakpoint-compact: 50rem;
+
+  --radius-card: 2rem;
+  --radius-tile: 1.25rem;
+
+  --text-label: 0.8125rem;
+  --text-label--line-height: 1rem;
+}
+
 @theme inline {
   --color-page: var(--page);
   --color-surface: var(--surface);
@@ -14,11 +31,6 @@
   --color-heading: var(--heading);
   --color-line: var(--line);
   --color-nav: var(--nav);
-  --color-nav-dark: rgba(15, 17, 21, 0.98);
-  --color-card-dark: rgba(25, 28, 35, 0.8);
-  --color-category: #0b1f4d;
-  --color-placeholder: var(--placeholder);
-  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-jakarta);
@@ -152,7 +164,6 @@
   --heading: #0a0a0b;
   --line: rgba(0, 0, 0, 0.08);
   --nav: rgba(255, 255, 255, 0.85);
-  --placeholder: #d4d4d8;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -166,7 +177,6 @@
     --heading: #ffffff;
     --line: rgba(255, 255, 255, 0.1);
     --nav: rgba(15, 17, 21, 0.85);
-    --placeholder: #3f3f46;
   }
 }
 
@@ -183,20 +193,8 @@ body {
   line-height: normal; /* original never sets line-height; Tailwind preflight defaults to 1.5 */
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, #000000 0%, #6b7280 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-@media (prefers-color-scheme: dark) {
-  /* the original's black gradient is invisible on its dark background */
-  .text-gradient {
-    background-image: linear-gradient(90deg, #ffffff 0%, #9ca3af 100%);
-  }
-}
-
-.bg-grid {
+/* Two-direction gradient grid has no utility equivalent. */
+@utility bg-grid {
   background-image: linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
   background-size: 40px 40px;

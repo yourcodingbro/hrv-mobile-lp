@@ -25,7 +25,7 @@ export function CategoryCard({
     <Card
       className={cn(
         // Transparent bg: a painted card bg bleeds as a light rim at the clipped corners. isolate keeps composited children (badge blur, tilt) clipped.
-        "relative isolate h-full justify-end gap-0 rounded-[32px] border border-line bg-transparent py-0 text-base leading-[normal] text-white shadow-[0_10px_30px_rgba(0,0,0,0.04)] ring-0 transition-shadow duration-400 ease-out-expo hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)]",
+        "relative isolate h-full justify-end gap-0 rounded-card border border-line bg-transparent py-0 text-base text-white shadow-sm ring-0 transition-shadow duration-300 ease-out-expo hover:shadow-xl",
         className
       )}
     >
@@ -36,11 +36,11 @@ export function CategoryCard({
         sizes={imageSizes}
         className="object-cover object-center"
       />
-      <div className="relative z-[2] bg-linear-to-b from-transparent via-black/40 to-black/80 p-10">
-        <Badge className="mb-4 h-auto rounded-full border-0 bg-white/20 px-3.5 py-1.5 text-[11px] font-extrabold tracking-[1px] text-white uppercase backdrop-blur-[10px]">
+      <div className="relative z-20 bg-linear-to-b from-transparent via-black/40 to-black/80 p-10">
+        <Badge className="mb-4 h-auto rounded-full border-0 bg-white/20 px-3.5 py-1.5 text-xs font-extrabold tracking-widest text-white uppercase backdrop-blur-md">
           {category}
         </Badge>
-        <h2 className="mb-3 font-heading text-[32px] font-bold tracking-[-1px]">
+        <h2 className="mb-3 font-heading text-3xl font-bold tracking-tight">
           {title}
         </h2>
         <h3 className="text-base leading-normal font-normal text-white/80">

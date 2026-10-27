@@ -7,20 +7,20 @@ import { cn } from "@/lib/utils"
 
 export function ProductsSection() {
   return (
-    <section id="termekek" className="relative z-[2] px-[6%] py-[100px]">
-      <Reveal className="mb-[60px] text-center">
+    <section id="termekek" className="relative z-20 px-gutter py-24">
+      <Reveal className="mb-16 text-center">
         <SectionHeader
           reverse
           title="Főbb termékkategóriáink"
           subtitle="Prémium Portfólió"
-          subtitleClassName="mb-3 text-[12px] font-extrabold tracking-[3px] uppercase"
+          subtitleClassName="mb-3 text-xs font-extrabold tracking-widest uppercase"
         />
       </Reveal>
-      <div className="mx-auto grid max-w-[1200px] grid-cols-2 gap-6 max-[1024px]:grid-cols-1">
+      <div className="mx-auto grid max-w-content grid-cols-2 gap-6 max-lg:grid-cols-1">
         {categories.map(({ wide, ...card }, i) => (
           // The original's tilt transform overrides its reveal translate, so cards only fade in.
-          <Reveal key={card.title} y={0} delay={(i + 1) * 0.1} className={cn(wide && "col-span-2 max-[1024px]:col-span-1")}>
-            <Tilt className={cn("grid h-full rounded-[32px]", wide ? "min-h-[500px]" : "min-h-[420px]")}>
+          <Reveal key={card.title} y={0} delay={(i + 1) * 0.1} className={cn(wide && "col-span-2 max-lg:col-span-1")}>
+            <Tilt className={cn("grid h-full rounded-card", wide ? "min-h-96" : "min-h-96")}>
               <CategoryCard {...card} imageSizes={wide ? "(max-width: 1024px) 88vw, 1200px" : undefined} />
             </Tilt>
           </Reveal>
