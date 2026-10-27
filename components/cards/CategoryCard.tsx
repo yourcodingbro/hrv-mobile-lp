@@ -24,7 +24,8 @@ export function CategoryCard({
   return (
     <Card
       className={cn(
-        "relative h-full justify-end gap-0 rounded-[32px] py-0 text-base leading-[normal] text-white shadow-[0_10px_30px_rgba(0,0,0,0.04)] ring-0 transition-shadow duration-400 ease-out-expo hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)]",
+        // Transparent bg: a painted card bg bleeds as a light rim at the clipped corners. isolate keeps composited children (badge blur, tilt) clipped.
+        "relative isolate h-full justify-end gap-0 rounded-[32px] border border-line bg-transparent py-0 text-base leading-[normal] text-white shadow-[0_10px_30px_rgba(0,0,0,0.04)] ring-0 transition-shadow duration-400 ease-out-expo hover:shadow-[0_30px_60px_rgba(0,0,0,0.12)]",
         className
       )}
     >
